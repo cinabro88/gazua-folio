@@ -1,16 +1,17 @@
 package com.cinabro.gazuafolio;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
 public class ApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void test() {
+        ZonedDateTime dateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+        System.out.println(dateTime);
+        System.out.println(dateTime.toEpochSecond());
+    }
 
 }
